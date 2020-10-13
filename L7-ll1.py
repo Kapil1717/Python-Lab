@@ -21,34 +21,29 @@ class LinkedList:
                 self.head = temp.next
                 temp = None
                 return
-
+            
         while (temp is not None):
             if temp.data == key:
                 break
             prev = temp
             temp = temp.next
-
         if (temp == None):
             return
-
         prev.next = temp.next
-
         temp = None
-
     def printList(self):
         temp = self.head
         while (temp):
             print(" %d" % (temp.data)),
             temp = temp.next
-
 linklist = LinkedList()
-linklist.input(5)
-linklist.input(1)
-linklist.input(8)
-linklist.input(4)
+linklist.input(17)
+linklist.input(18)
+linklist.input(45)
+linklist.input(77)
 
 print("Created Linked List: ")
 linklist.printList()
-linklist.deleteNode(4)
+linklist.deleteNode(45)
 print("\nLinked List after Deletion of 1:")
 linklist.printList()
