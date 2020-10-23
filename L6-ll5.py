@@ -1,5 +1,5 @@
 #121910313016
-#creating a class
+
 class Node:
     def __init__(self,data):
         self.data=data
@@ -33,13 +33,13 @@ class LinkedList:
         while temp:
             print(temp.data)
             temp=temp.next
-l=LinkedList()
-n=int(input("Enter how many numbers you want to add "))
+l = LinkedList()
+n = int(input("Enter how many numbers you want to add: "))
 for i in range(n):
     data=int(input("enter data item: "))
     l.append(data)
 l.print_list()
-k=int(input("Enter the element to insert: "))
-i=int(input("Enter the node after which element to be inserted :"))
+k = int(input("Enter the element to insert: "))
+i = int(input("Enter the node after which element to be inserted :"))
 l.insert_at_position(i,k)
 l.print_list()
