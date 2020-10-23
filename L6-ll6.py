@@ -1,5 +1,4 @@
 #121910313016
-#creating a class
 class Node:
     def __init__(self,data):
         self.data=data
@@ -7,6 +6,7 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.head=None
+        
     def append(self,data):
         new_node=Node(data)
         if self.head is None:
@@ -17,6 +17,7 @@ class LinkedList:
             while temp.next:
                 temp=temp.next
             temp.next=new_node
+            
     def search(self,key):
         temp=self.head
         while temp:
@@ -25,16 +26,17 @@ class LinkedList:
                 return
             temp=temp.next
         print("Element not found ")
+        
     def print_list(self):
         temp=self.head
         while temp:
             print(temp.data)
             temp=temp.next
-l=LinkedList()
-n=int(input("Enter how many numbers you want to add "))
-for i in range(n):
-    data=int(input("Enter the data item: "))
-    l.append(data)
-l.print_list()
-k=int(input("Enter the element to search: "))
-l.search(k)
+            
+ll = LinkedList()
+ll.append(17)
+ll.append(18)
+ll.append(45)
+ll.print_list()
+k = int(input("Enter the element to search: "))
+ll.search(k)
