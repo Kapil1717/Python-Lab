@@ -1,9 +1,10 @@
-#define a class
+#121910313016
+#defining a class
 class Node:
     #defining a function
-    def insnode(self,data=None,next=None):
+    def __init__(self,data=None,next=None):
         self.data= data
-        self.next= next
+        self.next= None
 
 #defining a function to insert nodes
 def insert(amp, item):
@@ -18,8 +19,9 @@ def display(amp):
     while(amp!=None):
         print(amp.data,end =" ")
         amp=amp.Next
+        
 #defining a function to create a linked list
-def createlist1(arr,n):
+def createlist(arr,n):
     amp=None
     for i in range(n-1,-1,-1):
         amp=insert(amp,arr[i])
@@ -27,5 +29,5 @@ def createlist1(arr,n):
 
 arr=[1,2,3,4,5,6,7]
 n=len(arr)
-amp=createlist1(arr,n)
+amp=createlist(arr,n)
 display(amp)
