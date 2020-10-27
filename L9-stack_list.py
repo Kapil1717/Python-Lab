@@ -6,7 +6,7 @@ class stack:
     def push(self,item):
         self.items.append(item)
 
-    def pop(self,data):
+    def pop(self):
         self.items.pop()
 
     def peek(self):
