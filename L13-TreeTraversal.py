@@ -6,6 +6,22 @@ class Node:
         self.left = None
         self.right = None
 
+    def insert(self,val):
+        if self.val:
+            if val < self.val:
+                if self.left is None:
+                    self.left = Node(val)
+                else:
+                    self.left.insert(val)
+            elif val > self.val:
+                if self.right is None:
+                    self.right = Node(val)
+                else:
+                    self.right.insert(val) 
+        else:
+            self.val = val
+
+
 class BinaryTree:
 
     def __init__(self):
@@ -33,13 +49,12 @@ class BinaryTree:
         return
 
 B=BinaryTree()
-B.root=Node(17)
-B.root.left=Node(2)
-B.root.right=Node(3)
-B.root.left.left=Node(4)
-B.root.left.right=Node(5)
-B.root.right.left=Node(7)
-B.root.right.right=Node(6)
+a = int(input("Enter the Root:"))
+B.root=Node(a)
+n = int(input("How many elements you want to add: "))
+print("Enter "+ str(n) + " elements you want to add:")
+for i in range(n):
+    B.root.insert(int(input()))
 print("Pre order Traversal")
 print(B.pre_order(B.root))
 print("In order Traversal")
